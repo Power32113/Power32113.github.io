@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend's Welcome</title>
+  <!-- You can add CSS styles here if you want -->
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>Please enter your name don't worry I made this website so put your name it doesnt matter how you put it:</p>
+  <input type="text" id="nameInput" />
+  <button onclick="checkName()">Submit</button>
+
+  <script>
+    function checkName() {
+      var name = document.getElementById("nameInput").value;
+      if (name.toLowerCase() === "marco") {
+        displayMessage("Welcome, Marco my number is 3465434263 and  sorry if this is extra.");
+      } else {
+        displayMessage("Sorry, your name is not Marco.");
+      }
+    }
+
+    function displayMessage(message) {
+      var messageElement = document.createElement("p");
+      messageElement.textContent = message;
+      document.body.appendChild(messageElement);
+    }
+  </script>
+</body>
+</html>
